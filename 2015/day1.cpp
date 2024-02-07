@@ -45,7 +45,7 @@ int main() {
         inputFile.close();
     }
     else {
-        std::cout << "Error: the file can't be opened." << std::endl;
+        std::cout << "Unable to open input.txt" << std::endl;
         return 1;
     }
 
@@ -55,7 +55,8 @@ int main() {
 
     int positionFirstBasement = nql.partTwo(instructions);
     if (positionFirstBasement != -1) {
-        std::cout << "Position of the character that causes Santa to first enter the basement: " << positionFirstBasement << std::endl;
+        std::cout << "Position of the character that causes Santa to first enter the basement: " 
+                << positionFirstBasement << std::endl;
     }
     else {
         std::cout << "Santa never enters the basement." << std::endl;
