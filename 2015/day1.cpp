@@ -43,8 +43,7 @@ int main() {
             instructions.push_back(c);
         }
         inputFile.close();
-    }
-    else {
+    } else {
         std::cout << "Unable to open input.txt" << std::endl;
         return 1;
     }
@@ -54,13 +53,11 @@ int main() {
     std::cout << "Floor required for Santa: " << floor << std::endl;
 
     int positionFirstBasement = nql.partTwo(instructions);
-    if (positionFirstBasement != -1) {
+    if (positionFirstBasement != -1)
         std::cout << "Position of the character that causes Santa to first enter the basement: " 
                 << positionFirstBasement << std::endl;
-    }
-    else {
+    else
         std::cout << "Santa never enters the basement." << std::endl;
-    }
 
     return 0;
 }

@@ -50,8 +50,7 @@ int main() {
             }
         }
         inputFile.close();
-    }
-    else {
+    } else {
         std::cout << "Unable to open input.txt" << std::endl;
         return 1;
     }
