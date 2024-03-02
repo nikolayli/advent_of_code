@@ -66,7 +66,6 @@ function partTwo(instructions) {
   });
 
   return firstLocationVisitedTwice;
-
 }
 
 fs.readFile('input.txt', 'utf8', (err, data) => {
@@ -81,5 +80,4 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
 
   console.log('Shortest way:', shortestPath);
   console.log('First location visited twice:', firstLocationVisitedTwice);
-
 });
