@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 function partOne(signals) {
   const messageLength = signals[0].length;
