@@ -3,4 +3,5 @@ Just my solutions for Advent of Code. Different languages ​​for different ye
 
 2015 - C++.  
 2016 - JavaScript.  
-2017 - Python3.  
+2017 - Python3. 
+2018 - Go.  
