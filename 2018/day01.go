@@ -7,6 +7,20 @@ import (
 	"strconv"
 )
 
+func main() {
+	changes, err := readChanges("input.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	resultingFrequency := partOne(changes)
+	firstDuplicateFrequency := partTwo(changes)
+
+	fmt.Printf("Resulting frequency: %d\n", resultingFrequency)
+	fmt.Printf("First frequency reached twice: %d\n", firstDuplicateFrequency)
+}
+
 func partOne(changes []int) int {
 	resultingFrequency := 0
 	for _, change := range changes {
@@ -58,18 +72,4 @@ func readChanges(filePath string) ([]int, error) {
 	}
 
 	return changes, nil
-}
-
-func main() {
-	changes, err := readChanges("input.txt")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	resultingFrequency := partOne(changes)
-	firstDuplicateFrequency := partTwo(changes)
-
-	fmt.Printf("Resulting frequency: %d\n", resultingFrequency)
-	fmt.Printf("First frequency reached twice: %d\n", firstDuplicateFrequency)
 }

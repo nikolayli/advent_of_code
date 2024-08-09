@@ -8,6 +8,20 @@ import (
 	"strings"
 )
 
+func main() {
+	boxIDs, err := readBoxIDs("input.txt")
+	if err != nil {
+		log.Fatalf("Failed to read box IDs: %v", err)
+	}
+
+	checksum := partOne(boxIDs)
+	commonLetters := partTwo(boxIDs)
+
+	fmt.Printf("Checksum for your list of box ID: %d\n", checksum)
+	fmt.Printf("Common letters between the two correct box IDs: %s\n", commonLetters)
+
+}
+
 func compareIDs(id1, id2 string) (string, int) {
 	diffCount := 0
 	var commonLetters strings.Builder
@@ -81,18 +95,4 @@ func readBoxIDs(filename string) ([]string, error) {
 	}
 
 	return boxIDs, nil
-}
-
-func main() {
-	boxIDs, err := readBoxIDs("input.txt")
-	if err != nil {
-		log.Fatalf("Failed to read box IDs: %v", err)
-	}
-
-	checksum := partOne(boxIDs)
-	commonLetters := partTwo(boxIDs)
-
-	fmt.Printf("Checksum for your list of box ID: %d\n", checksum)
-	fmt.Printf("Common letters between the two correct box IDs: %s\n", commonLetters)
-
 }
